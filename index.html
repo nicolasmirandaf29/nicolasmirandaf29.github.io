@@ -124,11 +124,12 @@
             flex-direction: column;
             background-color: var(--card-bg);
             border: 1px solid #2d3748;
-            border-radius: 12px;
-            margin-bottom: 50px;
-            overflow: hidden;
+            border-radius: 16px;
+            margin-bottom: 60px;
+            padding: 30px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             transition: border-color 0.3s, box-shadow 0.3s;
+            gap: 30px;
         }
         .project-row:hover {
             border-color: var(--accent-color);
@@ -136,8 +137,8 @@
         }
         
         .project-content {
-            padding: 40px;
             flex: 1;
+            padding: 10px 20px;
         }
         .project-content h3 {
             color: var(--heading-color);
@@ -148,20 +149,21 @@
             color: #cbd5e0;
             margin-bottom: 25px;
             font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         /* Contenedor de las dos imágenes */
         .project-images {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            padding: 0 40px 40px 40px;
+            gap: 25px;
+            padding: 10px;
         }
         .project-images img {
             width: 100%;
             height: auto;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px; 
             border: 1px solid #4a5568;
             max-height: 400px;
         }
@@ -170,31 +172,29 @@
         @media (min-width: 900px) {
             .project-row {
                 flex-direction: row;
-                align-items: center;
+                align-items: stretch; 
+                padding: 40px; 
+                gap: 40px; 
             }
-            /* Intercalar el orden visual en Desktop */
             .project-row:nth-child(even) {
                 flex-direction: row-reverse;
             }
             .project-content {
                 width: 50%;
-                padding: 50px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
             }
             .project-images {
                 width: 50%;
-                flex-direction: row; /* Imágenes una al lado de la otra */
-                padding: 50px;
-                gap: 15px;
+                flex-direction: row; 
+                padding: 10px;
+                gap: 20px; 
             }
             .project-images img {
                 width: 50%;
-                height: 250px;
-            }
-            .project-row:nth-child(even) .project-images {
-                padding-left: 0;
-            }
-            .project-row:nth-child(odd) .project-images {
-                padding-right: 0;
+                height: 280px; 
             }
         }
 
@@ -255,7 +255,6 @@
 
     <!-- Menú de Navegación -->
     <nav>
-        <!-- Logo con el nombre exacto del archivo -->
         <a href="#"><img src="Logo Miranda.jpg" alt="Miranda Logo" class="nav-logo"></a>
         <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -267,7 +266,6 @@
 
     <!-- Sección Héroe (Profesional y Tecnológica) -->
     <header class="hero">
-        <!-- NOMBRE COMPLETO ACTUALIZADO -->
         <h1>Adolfo Nicolás Miranda Ferreira</h1>
         <p>Especialista en Diseño Mecánico, Robótica Industrial y Simulación Avanzada (FEA/CFD). Transformando la Industria 4.0 a través de la innovación en ingeniería electromecánica y la optimización de procesos.</p>
         <a href="#proyectos" class="btn">Explorar Proyectos</a>
@@ -291,17 +289,17 @@
         <div class="project-row">
             <div class="project-content">
                 <h3>Robótica e Industria 4.0</h3>
-                <!-- DESCRIPCIÓN ACTUALIZADA CON DETALLES DE VISIÓN Y FUERZA -->
-                <p>Investigación y desarrollo de soluciones en robótica industrial para el ensamblaje automatizado de cables utilizando brazos robóticos articulados (ABB). El proyecto se basó en la detección y mapeo de superficies mediante sensado de fuerza. Desarrollé íntegramente el efector final (end-effector), abarcando su diseño mecánico, simulación estructural (FEA) y la implementación del sistema de medición. Este sistema utilizaba una cámara industrial acoplada a visión artificial para predecir y medir la fuerza ejercida por el robot en tiempo real. La integración de estas tecnologías y la programación de trayectorias garantizaron una alta precisión operativa. Este trabajo fue galardonado con el Premio al Mejor Artículo en la conferencia ICEIB 2026 (Ref: B260155).</p>
+                <p>Investigación y desarrollo de soluciones en robótica industrial para el ensamblaje <b>autónomo</b> de cables utilizando brazos robóticos articulados (ABB). A diferencia de sistemas con movimientos preprogramados, este proyecto dotó al robot de capacidad de decisión en tiempo real basada en la detección y mapeo de superficies mediante sensado de fuerza. Desarrollé íntegramente el efector final (end-effector) y el sistema de medición, integrando una cámara industrial y visión artificial para predecir la fuerza ejercida, decidir los puntos exactos de inserción y validar si el ensamble fue correcto. Esta autonomía garantizó una alta precisión operativa y fue galardonada con el Premio al Mejor Artículo en la conferencia ICEIB 2026 (Ref: B260155).</p>
                 <div class="project-tags">
-                    <span class="tag">Robótica Industrial</span>
+                    <span class="tag">Robótica Autónoma</span>
                     <span class="tag">Visión Artificial</span>
                     <span class="tag">Sensado de Fuerza</span>
-                    <span class="tag">SolidWorks (FEA)</span>
+                    <span class="tag">Algoritmos de Decisión</span>
                 </div>
             </div>
             <div class="project-images">
-                <img src="IMG_6242.jpg" alt="Brazo Robótico ABB Industria 4.0">
+                <!-- CORREGIDO: SE CAMBIÓ LA EXTENSIÓN A .jpeg SEGÚN REPOSITORIO -->
+                <img src="IMG_6242.jpeg" alt="Brazo Robótico ABB Industria 4.0">
                 <img src="Screenshot 2026-08-17 205946.png" alt="Simulación FEA del herramental robótico">
             </div>
         </div>
@@ -310,7 +308,6 @@
         <div class="project-row">
             <div class="project-content">
                 <h3>Fórmula Student (FSAE)</h3>
-                <!-- DESCRIPCIÓN ACTUALIZADA -->
                 <p>Ingeniero de Aerodinámica para el Taiwan Tech Racing Team. Participé en la fabricación del monocasco y lideré el proyecto de diseño y fabricación del alerón trasero para el monoplaza de 2ª generación. Implementé análisis avanzados de dinámica de fluidos computacional (CFD) en Ansys Fluent para optimizar alerones traseros (rear wings) y louvers, reduciendo la resistencia aerodinámica y maximizando la carga aerodinámica. El equipo se coronó Campeón Nacional 2026.</p>
                 <div class="project-tags">
                     <span class="tag">Ansys Fluent (CFD)</span>
@@ -338,8 +335,10 @@
                 </div>
             </div>
             <div class="project-images">
-                <img src="IMG_0439.jpg" alt="Transformadores en fábrica">
-                <img src="IMG_0643.jpg" alt="Pruebas eléctricas a transformadores">
+                <!-- CORREGIDO: SE CAMBIÓ LA EXTENSIÓN A .jpeg SEGÚN REPOSITORIO -->
+                <img src="IMG_0439.jpeg" alt="Transformadores en fábrica">
+                <!-- CORREGIDO: SE CAMBIÓ LA EXTENSIÓN A .jpeg SEGÚN REPOSITORIO -->
+                <img src="IMG_0643.jpeg" alt="Pruebas eléctricas a transformadores">
             </div>
         </div>
 
