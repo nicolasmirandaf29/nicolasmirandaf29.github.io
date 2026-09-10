@@ -7,14 +7,15 @@
     <title>Adolfo Miranda | Portafolio de Ingeniería</title>
     <style>
         :root {
-            /* Colores extraídos del logo: Azul marino muy oscuro y Amarillo brillante */
+            /* Colores Base Oscuros */
             --bg-color: #11151c;
-            --nav-footer-bg: #070a0f; /* Color exacto del fondo del logo */
+            --nav-footer-bg: #070a0f; 
             --card-bg: #1a202c;
             --text-color: #e2e8f0;
             --heading-color: #ffffff;
-            --accent-color: #fce853; /* Amarillo del logo */
-            --accent-hover: #e3d042;
+            /* Nuevo color Verde Manzana basado en tu imagen */
+            --accent-color: #99FF00; 
+            --accent-hover: #80d600;
             --tag-bg: #2d3748;
         }
         * {
@@ -42,7 +43,7 @@
             border-bottom: 1px solid #1a202c;
         }
         .nav-logo {
-            height: 35px; /* Altura del logo en la barra de navegación */
+            height: 35px;
             width: auto;
             display: block;
         }
@@ -61,138 +62,183 @@
         nav a:hover {
             color: var(--accent-color);
         }
-        /* Encabezado Principal */
+        
+        /* Encabezado Principal (Tecnológico / Profesional) */
         .hero {
-            background: linear-gradient(rgba(7, 10, 15, 0.85), rgba(17, 21, 28, 0.95)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(rgba(7, 10, 15, 0.88), rgba(17, 21, 28, 0.98)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             color: white;
-            padding: 120px 5%;
+            padding: 140px 5%;
             text-align: center;
             border-bottom: 1px solid #1a202c;
         }
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             margin-bottom: 15px;
             color: var(--heading-color);
+            letter-spacing: -1px;
         }
         .hero p {
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto 35px;
+            color: #cbd5e0;
             line-height: 1.8;
+            font-weight: 300;
         }
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
-            color: #070a0f; /* Texto oscuro para que resalte en el botón amarillo */
-            padding: 12px 30px;
-            border-radius: 5px;
+            color: #070a0f;
+            padding: 14px 35px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(153, 255, 0, 0.2);
         }
         .btn:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(153, 255, 0, 0.4);
         }
+
         /* Secciones Comunes */
         section {
-            padding: 60px 5%;
+            padding: 80px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
         section h2 {
             color: var(--accent-color);
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
-        /* Proyectos (Grid) */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .project-card {
+
+        /* Proyectos en Fila (Layout individual) */
+        .project-row {
+            display: flex;
+            flex-direction: column;
             background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #2d3748;
-            display: flex;
-            flex-direction: column;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(252, 232, 83, 0.15); /* Sombra amarilla sutil */
+        .project-row:hover {
             border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(153, 255, 0, 0.1);
         }
-        /* Imágenes de proyectos */
-        .project-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid #2d3748;
-        }
+        
         .project-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+            padding: 40px;
+            flex: 1;
         }
         .project-content h3 {
             color: var(--heading-color);
-            margin-bottom: 12px;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
         .project-content p {
             color: #cbd5e0;
-            margin-bottom: 15px;
-            flex-grow: 1;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
         }
-        .project-tags {
-            margin-top: auto;
+        
+        /* Contenedor de las dos imágenes */
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 40px 40px 40px;
         }
+        .project-images img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #4a5568;
+            max-height: 400px;
+        }
+
+        /* Layout para pantallas grandes (Desktop) */
+        @media (min-width: 900px) {
+            .project-row {
+                flex-direction: row;
+                align-items: center;
+            }
+            /* Intercalar el orden visual en Desktop */
+            .project-row:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            .project-content {
+                width: 50%;
+                padding: 50px;
+            }
+            .project-images {
+                width: 50%;
+                flex-direction: row; /* Imágenes una al lado de la otra */
+                padding: 50px;
+                gap: 15px;
+            }
+            .project-images img {
+                width: 50%;
+                height: 250px;
+            }
+            .project-row:nth-child(even) .project-images {
+                padding-left: 0;
+            }
+            .project-row:nth-child(odd) .project-images {
+                padding-right: 0;
+            }
+        }
+
         .tag {
             display: inline-block;
             background-color: var(--tag-bg);
             color: var(--accent-color);
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 0 5px 5px 0;
+            font-size: 0.85rem;
+            margin: 0 8px 8px 0;
             border: 1px solid #4a5568;
+            font-weight: 600;
         }
+
         /* Habilidades */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
         }
         .skill-badge {
             background-color: var(--tag-bg);
             color: var(--accent-color);
-            padding: 12px 25px;
+            padding: 15px 30px;
             border-radius: 30px;
             font-weight: bold;
+            font-size: 1.1rem;
             border: 1px solid var(--accent-color);
-            box-shadow: 0 0 10px rgba(252, 232, 83, 0.1);
+            box-shadow: 0 0 15px rgba(153, 255, 0, 0.05);
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .skill-badge:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(252, 232, 83, 0.3);
+            box-shadow: 0 0 20px rgba(153, 255, 0, 0.25);
         }
+
         /* Footer / Contacto */
         footer {
             background-color: var(--nav-footer-bg);
             color: var(--text-color);
             text-align: center;
-            padding: 40px 5%;
+            padding: 50px 5%;
             border-top: 1px solid #1a202c;
         }
         footer a {
@@ -209,7 +255,7 @@
 
     <!-- Menú de Navegación -->
     <nav>
-        <!-- Logo implementado aquí -->
+        <!-- Logo con el nombre exacto del archivo -->
         <a href="#"><img src="Logo Miranda.jpg" alt="Miranda Logo" class="nav-logo"></a>
         <ul>
             <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -219,100 +265,109 @@
         </ul>
     </nav>
 
-    <!-- Sección Héroe (Portada amigable) -->
+    <!-- Sección Héroe (Profesional y Tecnológica) -->
     <header class="hero">
-        <h1>¡Hola! Soy Adolfo 👋</h1>
-        <p>Bienvenido a mi espacio. Soy estudiante de Ingeniería Electromecánica, un apasionado por dar vida a las ideas a través del diseño CAD, la aerodinámica automotriz y la Industria 4.0.</p>
-        <a href="#proyectos" class="btn">Descubre mi trabajo</a>
+        <h1>Adolfo N. Miranda</h1>
+        <p>Especialista en Diseño Mecánico, Robótica Industrial y Simulación Avanzada (FEA/CFD). Transformando la Industria 4.0 a través de la innovación en ingeniería electromecánica y la optimización de procesos.</p>
+        <a href="#proyectos" class="btn">Explorar Proyectos</a>
     </header>
 
     <!-- Sobre Mí -->
     <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #cbd5e0;">
+        <h2>Perfil Profesional</h2>
+        <p style="text-align: center; max-width: 900px; margin: 0 auto; font-size: 1.15rem; color: #cbd5e0; line-height: 1.8;">
             Resido en Lambaré, Paraguay, y me encuentro en el último semestre de Ingeniería Electromecánica en la Universidad Politécnica Taiwán Paraguay (UPTP). 
-            Mi enfoque profesional combina el diseño mecánico de alta precisión, la simulación de fluidos y estructuras (FEA/CFD), y la automatización mediante sistemas de control. 
-            Me apasiona resolver problemas complejos en la industria y el automovilismo.
+            Mi enfoque técnico combina el diseño CAD de alta precisión, la simulación estructural y de fluidos, y la automatización mediante sistemas de control. 
+            Me dedico a resolver desafíos de ingeniería complejos aplicados tanto en el sector industrial como en la aerodinámica automotriz de competición.
         </p>
     </section>
 
-    <!-- Proyectos con Imágenes -->
+    <!-- Proyectos con Secciones Individuales -->
     <section id="proyectos" style="background-color: #0b0e14;">
         <h2>Portafolio de Proyectos</h2>
-        <div class="projects-grid">
-            
-            <!-- Proyecto 1 -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fórmula Student" class="project-img">
-                <div class="project-content">
-                    <h3>Fórmula Student (FSAE) - Monocasco y Aerodinámica</h3>
-                    <p>Diseño, desarrollo y análisis de dinámica de fluidos (CFD) para el paquete aerodinámico (louvers, rear wings) y monocasco del monoplaza de 2ª generación del Taiwan Tech Racing Team. Vehículo Campeón Nacional 2026.</p>
-                    <div class="project-tags">
-                        <span class="tag">Ansys Fluent</span>
-                        <span class="tag">SolidWorks</span>
-                        <span class="tag">CFD</span>
-                        <span class="tag">Aerodinámica</span>
-                    </div>
+        
+        <!-- Proyecto 1: Robótica -->
+        <div class="project-row">
+            <div class="project-content">
+                <h3>Robótica e Industria 4.0</h3>
+                <p>Investigación y desarrollo de soluciones en robótica industrial. Este proyecto se centró en el ensamblaje automatizado de cables utilizando brazos robóticos articulados de precisión (ABB). El análisis de fuerzas, programación de trayectorias y optimización de herramentales mediante simulación estructural (FEA) garantizó la precisión operativa. Este trabajo fue galardonado con el Premio al Mejor Artículo en la conferencia ICEIB 2026 (Ref: B260155).</p>
+                <div class="project-tags">
+                    <span class="tag">Robótica Industrial</span>
+                    <span class="tag">SolidWorks Simulation</span>
+                    <span class="tag">Análisis Estructural (FEA)</span>
+                    <span class="tag">Automatización</span>
                 </div>
             </div>
-
-            <!-- Proyecto 2 -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restauración de Vehículo" class="project-img">
-                <div class="project-content">
-                    <h3>Restauración de Vehículo Eléctrico</h3>
-                    <p>Liderazgo técnico en la restauración integral de un vehículo eléctrico en MIRANDA GARAGE. Coordinación del equipo de mecánicos, diagnóstico de sistemas eléctricos y reemplazo de componentes.</p>
-                    <div class="project-tags">
-                        <span class="tag">Mecánica Automotriz</span>
-                        <span class="tag">Gestión de Proyectos</span>
-                        <span class="tag">Liderazgo</span>
-                    </div>
-                </div>
+            <div class="project-images">
+                <img src="IMG_6242.jpg" alt="Brazo Robótico ABB Industria 4.0">
+                <img src="Screenshot 2026-08-17 205946.png" alt="Simulación FEA del herramental robótico">
             </div>
-
-            <!-- Proyecto 3 -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Robótica Industrial" class="project-img">
-                <div class="project-content">
-                    <h3>Ensamblaje de Cables con Robots</h3>
-                    <p>Investigación y desarrollo en robótica industrial. Artículo publicado y presentado en la conferencia ICEIB 2026 (Ref: B260155), ganador del Premio al Mejor Artículo de Conferencia.</p>
-                    <div class="project-tags">
-                        <span class="tag">Robótica Industrial</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Investigación</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <!-- Proyecto 2: Fórmula Student -->
+        <div class="project-row">
+            <div class="project-content">
+                <h3>Fórmula Student (FSAE)</h3>
+                <p>Ingeniero de Aerodinámica para el Taiwan Tech Racing Team. Lideré el diseño y desarrollo del monocasco y paquete aerodinámico completo para el monoplaza de 2ª generación. Implementé análisis avanzados de dinámica de fluidos computacional (CFD) en Ansys Fluent para optimizar alerones traseros (rear wings) y louvers, reduciendo la resistencia aerodinámica y maximizando la carga aerodinámica. El equipo se coronó Campeón Nacional 2026.</p>
+                <div class="project-tags">
+                    <span class="tag">Ansys Fluent (CFD)</span>
+                    <span class="tag">Diseño Aerodinámico</span>
+                    <span class="tag">Materiales Compuestos</span>
+                    <span class="tag">Ingeniería Automotriz</span>
+                </div>
+            </div>
+            <div class="project-images">
+                <img src="0G6A6940_Original.jpg" alt="Coche de Fórmula Student FSAE">
+                <img src="IMG_3196.JPG" alt="Simulación de fluidos CFD Ansys">
+            </div>
+        </div>
+
+        <!-- Proyecto 3: Transformadores -->
+        <div class="project-row">
+            <div class="project-content">
+                <h3>Ingeniería Eléctrica en Fábrica de Transformadores</h3>
+                <p>Adquisición de experiencia práctica en el sector eléctrico e industrial durante mi pasantía de ingeniería (2024). Colaboré activamente en la línea de producción y mantenimiento de transformadores de distribución. Mi rol involucró la ejecución rigurosa de pruebas eléctricas de aislamiento y conductividad, así como la verificación de parámetros de diseño para asegurar el estricto cumplimiento normativo bajo el estándar NP 2 026 94.</p>
+                <div class="project-tags">
+                    <span class="tag">Sistemas de Potencia</span>
+                    <span class="tag">Mantenimiento Industrial</span>
+                    <span class="tag">Pruebas Eléctricas</span>
+                    <span class="tag">Normativas Técnicas</span>
+                </div>
+            </div>
+            <div class="project-images">
+                <img src="IMG_0439.jpg" alt="Transformadores en fábrica">
+                <img src="IMG_0643.jpg" alt="Pruebas eléctricas a transformadores">
+            </div>
+        </div>
+
     </section>
 
     <!-- Habilidades -->
     <section id="habilidades">
-        <h2>Habilidades Técnicas</h2>
+        <h2>Competencias Técnicas</h2>
         <div class="skills-container">
-            <span class="skill-badge">SolidWorks / CAD</span>
-            <span class="skill-badge">Ansys Fluent (CFD/FEA)</span>
+            <span class="skill-badge">SolidWorks / CAD / FEA</span>
+            <span class="skill-badge">Ansys Fluent (CFD)</span>
+            <span class="skill-badge">Robótica Industrial & ABB</span>
             <span class="skill-badge">MATLAB & Python</span>
-            <span class="skill-badge">Arduino (Sistemas PID)</span>
-            <span class="skill-badge">Impresión 3D & CNC</span>
-            <span class="skill-badge">Mecánica Automotriz</span>
+            <span class="skill-badge">Arduino (Sistemas de Control PID)</span>
+            <span class="skill-badge">Sistemas Eléctricos</span>
         </div>
     </section>
 
     <!-- Contacto / Footer -->
     <footer id="contacto">
         <h2 style="color: var(--heading-color); margin-bottom: 20px;">Contacto</h2>
-        <p>¿Interesado en colaborar o conocer más sobre mi trabajo?</p>
-        <p style="margin: 20px 0;">
+        <p style="font-size: 1.1rem;">¿Buscando soluciones innovadoras en ingeniería electromecánica?</p>
+        <p style="margin: 25px 0; font-size: 1.1rem;">
             📧 <a href="mailto:nicolasmirandaf29@gmail.com">nicolasmirandaf29@gmail.com</a> | 
             📍 Lambaré, Paraguay |
             📞 +595 982925314
         </p>
         <p>
-            🔗 <a href="https://www.linkedin.com/in/nicol%C3%A1s-miranda-093123316" target="_blank">Conecta conmigo en LinkedIn</a>
+            🔗 <a href="https://www.linkedin.com/in/nicol%C3%A1s-miranda-093123316" target="_blank" style="font-weight: bold;">Conectar en LinkedIn</a>
         </p>
-        <p style="margin-top: 40px; font-size: 0.9rem; color: #718096;">
+        <p style="margin-top: 50px; font-size: 0.95rem; color: #718096;">
             © 2026 Adolfo Nicolás Miranda Ferreira. Todos los derechos reservados.
         </p>
     </footer>
