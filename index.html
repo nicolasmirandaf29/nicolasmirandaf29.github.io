@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adolfo Miranda | Portafolio de Ingeniería</title>
+    <style>
+        :root {
+            --primary-color: #1A365D;
+            --secondary-color: #2B6CB0;
+            --bg-color: #F8F9FA;
+            --text-color: #333;
+            --card-bg: #FFFFFF;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        /* Navegación */
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #90CDF4;
+        }
+        /* Encabezado Principal */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(43, 108, 176, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #EDF2F7;
+        }
+        /* Secciones Comunes */
+        section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        /* Proyectos (Grid) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-content {
+            padding: 20px;
+        }
+        .project-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        .project-tags {
+            margin-top: 15px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #EDF2F7;
+            color: #2D3748;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 0 5px 5px 0;
+        }
+        /* Habilidades */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .skill-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        /* Footer / Contacto */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 5%;
+        }
+        footer a {
+            color: #90CDF4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <div style="font-weight: bold; font-size: 1.2rem;">Adolfo Miranda</div>
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Héroe -->
+    <header class="hero">
+        <h1>Adolfo Nicolás Miranda Ferreira</h1>
+        <p>Estudiante de Ingeniería Electromecánica | Especialista en Diseño CAD, Aerodinámica e Industria 4.0</p>
+        <a href="#proyectos" class="btn">Ver Mis Proyectos</a>
+    </header>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            Resido en Lambaré, Paraguay, y me encuentro en el último semestre de Ingeniería Electromecánica en la Universidad Politécnica Taiwán Paraguay (UPTP). 
+            Mi enfoque profesional combina el diseño mecánico de alta precisión, la simulación de fluidos y estructuras (FEA/CFD), y la automatización mediante sistemas de control. 
+            Me apasiona resolver problemas complejos en la industria y el automovilismo.
+        </p>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <h2>Portafolio de Proyectos</h2>
+        <div class="projects-grid">
+            
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Fórmula Student (FSAE) - Monocasco y Aerodinámica</h3>
+                    <p>Diseño, desarrollo y análisis de dinámica de fluidos (CFD) para el paquete aerodinámico (louvers, rear wings) y monocasco del monoplaza de 2ª generación del Taiwan Tech Racing Team. Vehículo Campeón Nacional 2026.</p>
+                    <div class="project-tags">
+                        <span class="tag">Ansys Fluent</span>
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">CFD</span>
+                        <span class="tag">Aerodinámica</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Restauración de Vehículo Eléctrico</h3>
+                    <p>Liderazgo técnico en la restauración integral de un vehículo eléctrico en MIRANDA GARAGE. Coordinación del equipo de mecánicos, diagnóstico de sistemas eléctricos y reemplazo de componentes.</p>
+                    <div class="project-tags">
+                        <span class="tag">Mecánica Automotriz</span>
+                        <span class="tag">Gestión de Proyectos</span>
+                        <span class="tag">Liderazgo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Ensamblaje de Cables con Robots</h3>
+                    <p>Investigación y desarrollo en robótica industrial. Artículo publicado y presentado en la conferencia ICEIB 2026 (Ref: B260155), ganador del Premio al Mejor Artículo de Conferencia.</p>
+                    <div class="project-tags">
+                        <span class="tag">Robótica Industrial</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">Investigación</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" style="background-color: white;">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-container">
+            <span class="skill-badge">SolidWorks / CAD</span>
+            <span class="skill-badge">Ansys Fluent (CFD/FEA)</span>
+            <span class="skill-badge">MATLAB & Python</span>
+            <span class="skill-badge">Arduino (Sistemas PID)</span>
+            <span class="skill-badge">Impresión 3D & CNC</span>
+            <span class="skill-badge">Mecánica Automotriz</span>
+        </div>
+    </section>
+
+    <!-- Contacto / Footer -->
+    <footer id="contacto">
+        <h2 style="color: white; margin-bottom: 20px;">Contacto</h2>
+        <p>¿Interesado en colaborar o conocer más sobre mi trabajo?</p>
+        <p style="margin: 20px 0;">
+            📧 <a href="mailto:nicolasmirandaf29@gmail.com">nicolasmirandaf29@gmail.com</a> | 
+            📍 Lambaré, Paraguay |
+            📞 +595 982925314
+        </p>
+        <p>
+            🔗 <a href="https://www.linkedin.com/in/nicolasmiranda-093123316/" target="_blank">Conecta conmigo en LinkedIn</a>
+        </p>
+        <p style="margin-top: 40px; font-size: 0.9rem; color: #CBD5E0;">
+            © 2026 Adolfo Nicolás Miranda Ferreira. Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
