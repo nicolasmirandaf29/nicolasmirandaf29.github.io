@@ -67,9 +67,18 @@
         .hero {
             background: linear-gradient(rgba(7, 10, 15, 0.88), rgba(17, 21, 28, 0.98)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             color: white;
-            padding: 140px 5%;
+            padding: 100px 5% 120px;
             text-align: center;
             border-bottom: 1px solid #1a202c;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 25px;
+            box-shadow: 0 0 25px rgba(198, 218, 82, 0.3);
         }
         .hero h1 {
             font-size: 3.8rem;
@@ -266,6 +275,9 @@
 
     <!-- Sección Héroe -->
     <header class="hero">
+        <!-- FOTO DE PERFIL AÑADIDA AQUÍ -->
+        <img src="WhatsApp Image 2026-09-13 at 10.47.21 PM(1).jpeg" alt="Adolfo Nicolás Miranda Ferreira" class="profile-pic">
+        
         <h1>Adolfo Nicolás Miranda Ferreira</h1>
         <p>Especialista en Diseño Mecánico, Robótica Industrial y Simulación Avanzada (FEA/CFD). Transformando la Industria 4.0 a través de la innovación en ingeniería electromecánica y la optimización de procesos.</p>
         <a href="#proyectos" class="btn">Explorar Proyectos</a>
@@ -288,14 +300,14 @@
         <!-- Proyecto 1: Robótica -->
         <div class="project-row">
             <div class="project-content">
-                <!-- TÍTULO Y DESCRIPCIÓN ACTUALIZADOS -->
-                <h3>Robótica Cognitiva e IA</h3>
-                <p>Investigación y desarrollo de soluciones en robótica industrial para el ensamblaje <b>autónomo</b> de cables utilizando brazos robóticos articulados (ABB). A diferencia de sistemas con movimientos preprogramados, este proyecto dotó al robot de capacidad de decisión en tiempo real basada en la detección y mapeo de superficies mediante sensado de fuerza. Desarrollé íntegramente el efector final (end-effector) y el sistema de medición, integrando una cámara industrial y visión artificial para predecir la fuerza ejercida, decidir los puntos exactos de inserción y validar si el ensamble fue correcto. Esta autonomía avanzada, característica de la <b>Industria 5.0</b>, garantizó una alta precisión operativa y fue galardonada con el Premio al Mejor Artículo en la conferencia ICEIB 2026 (Ref: B260155).</p>
+                <!-- TÍTULO Y DESCRIPCIÓN ACTUALIZADOS A INDUSTRIA 4.0 -->
+                <h3>Robótica e Industria 4.0</h3>
+                <p>Investigación y desarrollo de soluciones en robótica industrial aplicadas al ensamblaje de cables utilizando brazos robóticos articulados (ABB), enmarcado en los principios de la <b>Industria 4.0</b>. El proyecto se basó en la detección y mapeo de superficies mediante sensado de fuerza. Desarrollé íntegramente el efector final (end-effector), abarcando su diseño mecánico, simulación estructural (FEA) y la implementación del sistema de medición. Este sistema integró una cámara industrial para medir y predecir la fuerza ejercida por el robot en tiempo real. La programación de trayectorias y la automatización del proceso garantizaron una alta precisión operativa. Este trabajo fue galardonado con el Premio al Mejor Artículo en la conferencia ICEIB 2026 (Ref: B260155).</p>
                 <div class="project-tags">
-                    <span class="tag">Robótica Autónoma</span>
-                    <span class="tag">Visión Artificial</span>
+                    <span class="tag">Robótica Industrial</span>
+                    <span class="tag">Industria 4.0</span>
                     <span class="tag">Sensado de Fuerza</span>
-                    <span class="tag">Algoritmos de Decisión</span>
+                    <span class="tag">SolidWorks (FEA)</span>
                 </div>
             </div>
             <div class="project-images">
